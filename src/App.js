@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import rocket from "./rocket.svg";
 import "./App.css";
 import NextLaunch from "./NextLaunch";
 import RecentActivity from "./RecentActivity";
@@ -41,9 +41,10 @@ function App() {
   };
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header> */}
+      <header className="App-header">
+        <img src={rocket} className="App-logo" alt="logo" />
+        SpaceX Launches
+      </header>
       {/* <Player></Player> */}
       <div className="Content">
         <RecentActivity launches={recentActivity}></RecentActivity>
