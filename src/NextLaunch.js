@@ -4,13 +4,11 @@ import Wrapper from "./Wrapper";
 
 const NextLaunch = (props) => {
   let launch = props.launch;
-  console.log(launch)
   return (
     <Wrapper title="Next Launch">
       <div className={styles.NextLaunch}>
         <img
           src={launch.links.mission_patch_small}
-          className="Mission-Patch"
           alt="mission-patch"
         />
         <div className={styles.Content}>
