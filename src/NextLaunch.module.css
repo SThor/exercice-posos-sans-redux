@@ -1,0 +1,28 @@
+.NextLaunch {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  margin-right: 20px;
+  max-height: 150px;    
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+h2,
+h3,
+p{
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: rgba(50, 50, 50, 0.8);
+}
