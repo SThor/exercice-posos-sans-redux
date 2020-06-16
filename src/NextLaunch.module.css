@@ -3,7 +3,7 @@
   flex-direction: row;
 }
 
-img {
+.MissionPatch {
   margin-right: 20px;
   max-height: 150px;    
   flex-grow: 0;

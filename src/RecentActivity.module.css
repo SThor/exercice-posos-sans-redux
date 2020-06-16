@@ -1,0 +1,41 @@
+.RecentActivity {
+  display: flex;
+  flex-direction: column;
+}
+
+.Launch {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.Launch>*{
+    margin:5px;
+}
+
+.MissionPatch {
+  flex: 0 1;
+  max-width: 100%;
+  height: auto;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  flex: 1 1;
+}
+
+.Date {
+  font-weight: normal;
+  color: rgba(50, 50, 50, 0.8);
+}
+
+.Title {
+  font-weight: 600;
+}
+
+.Video{
+    flex: 0 1;
+    content: url("https://developers.google.com/site-assets/logo-youtube.svg");
+}

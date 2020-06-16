@@ -41,4 +41,11 @@
 .Content{
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.Content>*{
+  flex: 1 1;
+  max-width: 33vw;  
 }

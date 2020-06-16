@@ -10,6 +10,7 @@ const NextLaunch = (props) => {
         <img
           src={launch.links.mission_patch_small}
           alt="mission-patch"
+          className={styles.MissionPatch}
         />
         <div className={styles.Content}>
           <h2>{launch.mission_name}</h2>
@@ -20,6 +21,7 @@ const NextLaunch = (props) => {
             href={`https://twitter.com/intent/tweet?text=${escape(
               "So excited by " + launch.mission_name + "! @SpaceX @elonmusk "
             )}&url=${launch.links.mission_patch_small}&via=posos_tech`}
+            data-size="large"
           >
             Tweet
           </a>
