@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./RecentActivity.module.css";
 import Wrapper from "./Wrapper";
+import logoYoutube from "./logo-youtube.svg";
 
 function timeAgo(dateString) {
   if (!dateString) {
@@ -57,9 +58,15 @@ const RecentActivity = (props) => {
                 </div>
                 <div className={styles.Title}>{launch.mission_name}</div>
               </div>
-              <a href="#" className={styles.Video} onClick={()=>{props.onVideoRequested(launch.links.youtube_id)}}>
-                Youtube link
-              </a>
+              <button
+                href="#"
+                className={styles.Video}
+                onClick={() => {
+                  props.onVideoRequested(launch.links.youtube_id);
+                }}
+              >
+                <img src={logoYoutube} alt="youtube logo" />
+              </button>
             </div>
           );
         })}
