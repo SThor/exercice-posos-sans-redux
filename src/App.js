@@ -3,6 +3,7 @@ import rocket from "./rocket.svg";
 import "./App.css";
 import NextLaunch from "./NextLaunch";
 import RecentActivity from "./RecentActivity";
+import Player from "./Player";
 
 function App() {
   const [nextLaunch, setNextLaunch] = useState({
@@ -31,23 +32,27 @@ function App() {
   useEffect(() => {
     fetchRecentActivity().then((data) => setRecentActivity(data));
   }, []);
+ 
+  const [videoID, setVideoID] = useState("");
+  const [videoVisible, setVideoVisible] = useState(false);
+  function onVideoRequested(videoID){
+    setVideoID(videoID);
+    setVideoVisible(true);
+  }
+  function onVideoClose(){
+    setVideoID(null);
+    setVideoVisible(false);
+  }
 
-  let dateOptions = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour12: true,
-  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={rocket} className="App-logo" alt="logo" />
         SpaceX Launches
       </header>
-      {/* <Player></Player> */}
+      <Player videoID={videoID} videoVisible={videoVisible} onClose={onVideoClose}></Player>
       <div className="Content">
-        <RecentActivity launches={recentActivity}></RecentActivity>
+        <RecentActivity launches={recentActivity} onVideoRequested={onVideoRequested}></RecentActivity>
         <NextLaunch launch={nextLaunch}></NextLaunch>
       </div>
     </div>

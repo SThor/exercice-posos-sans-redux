@@ -57,7 +57,7 @@ const RecentActivity = (props) => {
                 </div>
                 <div className={styles.Title}>{launch.mission_name}</div>
               </div>
-              <a href={launch.links.video_link} className={styles.Video}>
+              <a href="#" className={styles.Video} onClick={()=>{props.onVideoRequested(launch.links.youtube_id)}}>
                 Youtube link
               </a>
             </div>
